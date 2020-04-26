@@ -15,6 +15,14 @@ function put_dot(){
     document.getElementById("number-content").value = written_keys + '.'
 }
 
+
+function put_parenthesis(key){
+    document.getElementById("container-number").value = true
+    written_keys = document.getElementById("number-content").value
+    document.getElementById("number-content").value = written_keys + key
+}
+
+
 function clean_content(){
     document.getElementById("number-content").value = ''
     document.getElementById("container-number").value = ''
@@ -28,13 +36,22 @@ function clean_last_value(){
 
 function operation(key){
     n = document.getElementById("number-content").value
-    document.getElementById("container-number").value = [n, key]
-    document.getElementById("number-content").value = ''
+    if (!(n.includes("(")) && !(n.includes(")"))){
+        document.getElementById("container-number").value = [n, key]
+        document.getElementById("number-content").value = ''
+    }
+    else{
+        document.getElementById("container-number").value = n + key
+
+        key = key.replace("**", "^");
+        key = key.replace("*", "x");
+        document.getElementById("number-content").value = n + ' ' + key + ' '
+    }
 }
 
 function result(){
     n = document.getElementById("container-number").value
-    if(n){
+    if(Array.isArray(n)){
         n[2] = document.getElementById("number-content").value
         res = eval('' + n.join(''))
         if (!(isNaN(res))){
