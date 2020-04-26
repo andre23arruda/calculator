@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href='assets/icon.ico' type="image/x-icon" />
+</head>
+<body id ="body">
+    <div id ="container-number" class="container-number">
+        <input id ="number-content" type="text" value="">
+        <button class='key' type="button" onclick="clean_last_value()">&lt&lt</button>
+    </div>
+    <div class="container-buttons">
+
+        <div class="fifth-line">
+            <button class='key' type="button" onclick="operation('/')">/</button>
+            <button class='key' type="button" onclick="nothing('(')">(</button>
+            <button class='key' type="button" onclick="nothing(')')">)</button>
+            <button class='key' type="button" onclick="clean_content()">C</button>
+        </div>
+
+        <div class="fourth-line">
+            <button class='key' type="button" onclick="put_value('7')">7</button>
+            <button class='key' type="button" onclick="put_value('8')">8</button>
+            <button class='key' type="button" onclick="put_value('9')">9</button>
+            <button class='key' type="button" onclick="operation('*')">x</button>
+        </div>
+
+        <div class="third-line">
+            <button class='key' type="button" onclick="put_value('4')">4</button>
+            <button class='key' type="button" onclick="put_value('5')">5</button>
+            <button class='key' type="button" onclick="put_value('6')">6</button>
+            <button class='key' type="button" onclick="operation('-')">-</button>
+        </div>
+
+        <div class="second-line">
+            <button class='key' type="button" onclick="put_value('1')">1</button>
+            <button class='key' type="button" onclick="put_value('2')">2</button>
+            <button class='key' type="button" onclick="put_value('3')">3</button>
+            <button class='key' type="button" onclick="operation('+')">+</button>
+        </div>
+
+        <div class="first-line">
+            <button class='key' type="button" onclick="operation('**')">^</button>
+            <button class='key' type="button" onclick="put_value('0')">0</button>
+            <button class='key' type="button" onclick="put_dot()">.</button>
+            <button id = 'btn-result' class='key' type="button" onclick="result()">=</button>
+        </div>
+
+    </div>
+    <footer class="author">
+        Developed by Andre Arruda
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+
+</body>
+</html>
