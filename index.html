@@ -15,9 +15,9 @@
     <div class="container-buttons">
 
         <div class="fifth-line">
-            <button class='key' type="button" onclick="operation('/')">/</button>
-            <button class='key' type="button" onclick="put_parenthesis('(')">(</button>
-            <button class='key' type="button" onclick="put_parenthesis(')')">)</button>
+            <button class='key' type="button" onclick="put_value('/')">/</button>
+            <button class='key' type="button" onclick="put_value('(')">(</button>
+            <button class='key' type="button" onclick="put_value(')')">)</button>
             <button class='key' type="button" onclick="clean_content()">C</button>
         </div>
 
@@ -25,27 +25,27 @@
             <button class='key' type="button" onclick="put_value('7')">7</button>
             <button class='key' type="button" onclick="put_value('8')">8</button>
             <button class='key' type="button" onclick="put_value('9')">9</button>
-            <button class='key' type="button" onclick="operation('*')">x</button>
+            <button class='key' type="button" onclick="put_value('x')">x</button>
         </div>
 
         <div class="third-line">
             <button class='key' type="button" onclick="put_value('4')">4</button>
             <button class='key' type="button" onclick="put_value('5')">5</button>
             <button class='key' type="button" onclick="put_value('6')">6</button>
-            <button class='key' type="button" onclick="operation('-')">-</button>
+            <button class='key' type="button" onclick="put_value('-')">-</button>
         </div>
 
         <div class="second-line">
             <button class='key' type="button" onclick="put_value('1')">1</button>
             <button class='key' type="button" onclick="put_value('2')">2</button>
             <button class='key' type="button" onclick="put_value('3')">3</button>
-            <button class='key' type="button" onclick="operation('+')">+</button>
+            <button class='key' type="button" onclick="put_value('+')">+</button>
         </div>
 
         <div class="first-line">
-            <button class='key' type="button" onclick="operation('**')">^</button>
+            <button class='key' type="button" onclick="put_value('^')">^</button>
             <button class='key' type="button" onclick="put_value('0')">0</button>
-            <button class='key' type="button" onclick="put_dot()">.</button>
+            <button class='key' type="button" onclick="put_value('.')">.</button>
             <button id = 'btn-result' class='key' type="button" onclick="result()">=</button>
         </div>
 
